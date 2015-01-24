@@ -90,6 +90,7 @@ footer {
   position: absolute;
   bottom: 1px;
   transition: transform 0.3s;
+  z-index: 2;
 }
 
 .jumped {
@@ -101,26 +102,39 @@ footer {
   height: 250px;
   top: 50%;
   margin-top: -125px;
+  width: 100%;
 }
 
 .obstacles {
   border-bottom: 1px dotted #666666;
-  padding: 1em 1em 0 10em;
-  text-align: justify;
   overflow: hidden;
-  white-space: nowrap;
-  padding-top: 200px;
+  padding-top: 170px;
+  height: 80px;
+  position: relative;
+  z-index: 3;
 }
 
 .obstacle {
   background: #000;
   width: 20px;
   height: 50px;
-  display: inline-block;
-  margin: 0 3.1em;
-  color: transparent;
+  display: block;
   border-radius: 10px 20px 0 0;
-  vertical-align: baseline;
+  box-shadow: #fff 0 0 16px;
+  transform: translateX(600px);
+  transition: transform 0.3s;
+}
+.obstacle-mini {
+  width: 10px;
+  height: 30px;
+}
+.obstacle-medium {
+  width: 15px;
+  height: 40px;
+}
+.obstacle-large {
+  width: 30px;
+  height: 80px;
 }
 
 /*# sourceMappingURL=styles.css.map */

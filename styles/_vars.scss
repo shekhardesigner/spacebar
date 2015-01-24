@@ -1,12 +1,18 @@
 //VARS
-$gray:			#ccc;
-$red:			#CA0404;
+$gray			: #ccc;
+$red			: #CA0404;
 
 
 //SIZES
-$header-size:	10em;
-$footer-size:	6.5em;
-$base-size:		250px;
+$header-size	: 10em;
+$footer-size	: 6.5em;
+$base-size		: 250px;
+$obstacle-size	: 80px;
+
+
+//Indexes
+$indexObstacles	: 3;
+$indexPerson	: 2;
 
 //MIXINS
 @mixin bar {
@@ -17,4 +23,9 @@ $base-size:		250px;
 @mixin box($s) {
 	box-sizing:border-box;
 	height:$s;
+}
+
+@mixin size($w, $h) {
+	width: $w;
+	height: $h;
 }

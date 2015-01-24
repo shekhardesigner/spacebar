@@ -13,13 +13,17 @@
 			},
 			elements = {
 				person: document.querySelector('.person'),
-				obstacle: document.querySelector('.obstacle'),
+				obstacles: document.querySelector('.obstacles'),
 				score: document.getElementById('metaScore'),
 				level: document.getElementById('metaLevel'),
 				highestScore: document.getElementById('metaHighest')
 			},
 			constants = {
-				jumpClass: 'jumped'
+				jumpClass: 'jumped',
+				obstacleClass: 'obstacle',
+				obstacleLargeClass: 'obstacle-large',
+				obstacleMiniClass: 'obstacle-mini',
+				obstacleMediumClass: 'obstacle-medium',
 			};
 
 		self.start = function(){
@@ -81,7 +85,6 @@
 		function updateScore(){
 			meta.score++;
 			elements.score.innerText = meta.score;
-			console.count('updateScores');
 			if(meta.score%100 == 0) {
 				updateLevel();
 				// self.stop();
@@ -90,7 +93,6 @@
 		function updateLevel(){
 			meta.level++;
 			elements.level.innerText = meta.level;
-			console.count('updateLevel');
 		}
 
 		function storeState(s,hs,l, mute){
@@ -109,6 +111,35 @@
 		self.init = function(){
 			console.log('start...')
 			self.start();
+			var _newChar = new Obstacles();
+			_newChar.generate();
+		}
+
+		function Obstacles(){
+			var obstacle = this,
+				pos = 600,
+				interval;
+
+			obstacle.generate = function(){
+				var _obs = document.createElement('span');
+				_obs.classList.add(constants.obstacleClass);
+
+				elements.obstacles.appendChild(_obs);
+				interval = setInterval(obstacle.move, 50);
+			};
+
+			obstacle.move = function(elm){
+				pos-= 7;
+				document.querySelector('.obstacle').style.transform = "translateX("+pos+"px)";
+				if(pos <= 0) obstacle.destroy();
+			};
+
+			obstacle.destroy = function(){
+				clearTimeout(interval);
+				document.querySelector('.obstacle').remove();
+				pos = 700;
+				obstacle.generate();
+			};
 		}
 
 	}

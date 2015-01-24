@@ -43,6 +43,7 @@ h1 {
 }
 
 main {
+  display: block;
   width: 600px;
   border: 1px solid #b3b3b3;
   margin: 0 auto;
@@ -52,6 +53,7 @@ main {
 }
 
 section {
+  display: block;
   position: absolute;
   top: 10em;
   bottom: 6.5em;
@@ -104,6 +106,19 @@ footer {
   margin-top: -125px;
   width: 100%;
 }
+.base::after {
+  content: " ";
+  display: block;
+  height: 50px;
+  background: url("../img/grasses.png") 100% bottom/auto 25px repeat-x;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+  -webkit-animation: moveGrasses 4s linear infinite;
+  animation: moveGrasses 4s linear infinite;
+}
 
 .obstacles {
   border-bottom: 1px dotted #666666;
@@ -123,6 +138,8 @@ footer {
   box-shadow: #fff 0 0 16px;
   transform: translateX(600px);
   transition: transform 0.3s;
+  position: absolute;
+  bottom: 0;
 }
 .obstacle-mini {
   width: 10px;
@@ -135,6 +152,23 @@ footer {
 .obstacle-large {
   width: 30px;
   height: 80px;
+}
+
+@-webkit-keyframes moveGrasses {
+  0% {
+    background-position: 100% bottom;
+  }
+  100% {
+    background-position: 0 bottom;
+  }
+}
+@keyframes moveGrasses {
+  0% {
+    background-position: 100% bottom;
+  }
+  100% {
+    background-position: 0 bottom;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

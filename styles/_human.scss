@@ -21,6 +21,20 @@
     top:50%;
     margin-top:-#{$base-size/2};
     width:100%;
+
+    &::after {
+        content: " ";
+        display: block;
+        height: 50px;
+        background: url('../img/grasses.png') 100% bottom/auto 25px repeat-x;
+        position:absolute;
+        left:0;
+        bottom:0;
+        width:100%;
+        z-index: $indexGrasses;
+        -webkit-animation: moveGrasses 4s linear infinite;
+        animation: moveGrasses 4s linear infinite;
+    }
 }
 
 .obstacles {
@@ -41,6 +55,8 @@
     box-shadow: #fff 0 0 16px;
     transform: translateX(600px);
     transition: transform 0.3s;
+    position:absolute;
+    bottom:0;
 
     &-mini {
         @include size(10px, 30px);
@@ -52,5 +68,25 @@
 
     &-large {
         @include size(30px, 80px);
+    }
+}
+
+@-webkit-keyframes moveGrasses {
+    0% {
+        background-position:100% bottom;
+    }
+
+    100% {
+        background-position:0 bottom;
+    }
+}
+
+@keyframes moveGrasses {
+    0% {
+        background-position:100% bottom;
+    }
+
+    100% {
+        background-position:0 bottom;
     }
 }

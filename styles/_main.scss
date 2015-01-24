@@ -1,5 +1,6 @@
 
 main {
+	display: block;
 	width:600px;
 	border:1px solid darken($gray, 10%);
 	margin:0 auto;
@@ -9,6 +10,7 @@ main {
 }
 
 section {
+	display: block;
 	position:absolute;
 	top:$header-size;
 	bottom:$footer-size;

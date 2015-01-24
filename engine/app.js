@@ -21,9 +21,7 @@
 			constants = {
 				jumpClass: 'jumped',
 				obstacleClass: 'obstacle',
-				obstacleLargeClass: 'obstacle-large',
-				obstacleMiniClass: 'obstacle-mini',
-				obstacleMediumClass: 'obstacle-medium',
+				obstacleVariation: ['obstacle-mini', 'obstacle-medium', 'obstacle-large']
 			};
 
 		self.start = function(){
@@ -109,10 +107,10 @@
 		}
 
 		self.init = function(){
-			console.log('start...')
 			self.start();
-			var _newChar = new Obstacles();
-			_newChar.generate();
+
+			var _new = new Obstacles();
+			_new.generate();
 		}
 
 		function Obstacles(){
@@ -121,15 +119,22 @@
 				interval;
 
 			obstacle.generate = function(){
-				var _obs = document.createElement('span');
+				var random = function _randon(){
+						var _num = Math.ceil(Math.random() * 10);
+						if(_num <= 3) return _num
+						else return _randon();
+					},
+					_obs = document.createElement('span');
+
 				_obs.classList.add(constants.obstacleClass);
+				_obs.classList.add(constants.obstacleVariation[random() - 1]);
 
 				elements.obstacles.appendChild(_obs);
 				interval = setInterval(obstacle.move, 60);
 			};
 
 			obstacle.move = function(elm){
-				pos-= 7;
+				pos-= 10;
 				document.querySelector('.obstacle').style.transform = "translateX("+pos+"px)";
 				if(pos <= 0) obstacle.destroy();
 			};
@@ -140,6 +145,7 @@
 				pos = 700;
 				obstacle.generate();
 			};
+
 		}
 
 	}

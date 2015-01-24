@@ -63,7 +63,7 @@
 					var _timer = setTimeout(function(){
 						elements.person.classList.remove(constants.jumpClass);
 						clearTimeout(_timer);
-					},500);
+					},400);
 				}
 			}, true);
 		}
@@ -125,7 +125,7 @@
 				_obs.classList.add(constants.obstacleClass);
 
 				elements.obstacles.appendChild(_obs);
-				interval = setInterval(obstacle.move, 50);
+				interval = setInterval(obstacle.move, 60);
 			};
 
 			obstacle.move = function(elm){

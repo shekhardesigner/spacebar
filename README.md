@@ -12,4 +12,4 @@ How to play:
  - The more you cross the path and jump obstacles - more points you gain. 
  - As you move and progress - speed/difficulty will be increased
 
-**Lets have fun!**
+[**Lets have fun!**](http://shekhardesigner.github.io/SpaceBar-Game/)

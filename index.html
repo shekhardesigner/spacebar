@@ -11,17 +11,27 @@
 			<h1>JumpGame</h1>
 			<div class="metabar">
 				<span class="meta left">
-					<big>1</big>
+					<big id="metaLevel">1</big>
 					Level
 				</span>
 				<span class="meta right">
-					<big>100</big>
+					<big id="metaScore">100</big>
 					Score	
 				</span>
+				<div>
+					HI: <strong id="metaHighest"></strong>
+				</div>
 			</div>
 		</header>
 
 		<section>
+			<aside>
+				<ul>
+					<li><a title="Mute" href="#">M</a></li>
+					<li><a title="Change Avatar" href="#">A</a></li>
+				</ul>
+			</aside>
+
 			<div class="base">
 				<div class="person">Human</div>
 
@@ -43,5 +53,6 @@
 			</ul>
 		</footer>
 	</main>
+	<script src="engine/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+
+.person {
+    width: 120px;
+    height: 120px;
+    background: url('../img/boy.jpg') center 0/100% auto no-repeat;
+    border-radius: 10px;
+    font-size:0;
+    position:absolute;
+    bottom:1px;    
+    transition: transform 0.3s;
+}
+
+.jumped {
+    transform:translateY(-100px);
+}
+
+.base {
+    position:absolute;
+    height:$base-size;
+    top:50%;
+    margin-top:-#{$base-size/2};
+}
+
+.obstacles {
+    border-bottom:1px dotted darken($gray, 40%);
+    padding:1em 1em 0 10em;
+    text-align:justify;
+    overflow:hidden;
+    white-space:nowrap;
+    padding-top:200px;
+}
+
+.obstacle {
+    background:#000;
+    width:20px;
+    height:50px;
+    display:inline-block;
+    margin: 0 3.1em;
+    color:rgba(0,0,0,0);
+    border-radius: 10px 20px 0 0;
+    vertical-align:baseline;
+}

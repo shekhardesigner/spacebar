@@ -1,0 +1,20 @@
+//VARS
+$gray:			#ccc;
+$red:			#CA0404;
+
+
+//SIZES
+$header-size:	10em;
+$footer-size:	6.5em;
+$base-size:		250px;
+
+//MIXINS
+@mixin bar {
+	background:darken($gray, 5%);
+	padding:20px;
+}
+
+@mixin box($s) {
+	box-sizing:border-box;
+	height:$s;
+}

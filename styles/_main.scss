@@ -1,0 +1,18 @@
+
+main {
+	width:600px;
+	border:1px solid darken($gray, 10%);
+	margin:0 auto;
+	min-height:100%;
+	box-sizing:border-box;
+	position: relative;
+}
+
+section {
+	position:absolute;
+	top:$header-size;
+	bottom:$footer-size;
+	width:100%;
+    background:lighten($gray, 18%);
+    overflow:hidden;
+}

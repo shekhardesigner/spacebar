@@ -1,4 +1,4 @@
-Jump Game
+Jump Game (In Progress... )
 =========
 
 Press Spacebar or (Jump button) to jump and cross the obstacles and gain points.
@@ -18,4 +18,4 @@ How to play:
 Credits
 -
  - Google Error Page
- - [ClipArtBest](http://www.clipartbest.com/)
+ - [ClipArtBest](http://www.clipartbest.com/) for GIF

@@ -13,3 +13,9 @@ How to play:
  - As you move and progress - speed/difficulty will be increased
 
 [**Lets have fun!**](http://shekhardesigner.github.io/SpaceBar-Game/)
+
+
+Credits
+-
+ - Google Error Page
+ - [ClipArtBest](http://www.clipartbest.com/)

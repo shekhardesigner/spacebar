@@ -2,17 +2,19 @@
 .person {
     width: 120px;
     height: 120px;
-    background: url('../img/boy.jpg') center 0/100% auto no-repeat;
+    background: url('../img/run.gif') left top/100% auto no-repeat;
     border-radius: 10px;
     font-size:0;
     position:absolute;
-    bottom:1px;    
+    left:30px;
+    bottom:-14px;    
     transition: transform 0.3s;
     z-index: $indexPerson;
+    transform:rotateZ(20deg);
 }
 
 .jumped {
-    transform:translateY(-100px);
+    transform:translateY(-150px);
 }
 
 .base {

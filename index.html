@@ -3,22 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JumpGame</title>
-	<link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" href="dist/game.css">
+	<style>
+		html, body, pre, code, kbd, samp {
+			font-family: 'Press Start 2P', cursive;
+		}
+		.nes-badge-block .nes-badge {
+			display: block;
+		}
+	  </style>
 </head>
 <body>
 	<main>
-		<header>
+		<header class="nes-container">
 			<h1>JumpGame</h1>
 			<div class="metabar">
 				<span class="meta left">
-					<big id="metaLevel">1</big>
-					Level
+					<i class="nes-icon star is-small"></i>
+					<strong id="metaLevel">1</strong>
 				</span>
-				<span class="meta right">
-					<big id="metaScore">100</big>
-					Score	
-					<div>
-						HI: <strong id="metaHighest"></strong>
+				<span class="meta right item nes-badge-block">
+					<div class="nes-badge is-splited">
+						<span class="is-dark">Score: </span>
+						<span class="is-success" id=metaScore>100%</span>
+					</div>
+					<div class="nes-badge is-splited">
+						<span class="is-dark">High: </span>
+						<span class="is-error" id=metaHighest>1000</span>
 					</div>
 				</span>
 			</div>
@@ -26,9 +38,9 @@
 
 		<section>
 			<aside>
-				<ul>
-					<li><a title="Mute" href="#">M</a></li>
-					<li><a title="Change Avatar" href="#">A</a></li>
+				<ul class="item">
+					<li><a title="Mute" href="#">Mute</a></li>
+					<li><a title="Change Avatar" href="#">Change Avatar</a></li>
 				</ul>
 			</aside>
 
@@ -38,14 +50,14 @@
 			</div>
 		</section>
 
-		<footer>
+		<footer class="nes-container">
 			<ul class="nav">
-				<li><a href="">Options</a></li>
-				<li><a href="">New Game</a></li>
-				<li><a href="">Save</a></li>
+				<li><a href="#" class="nes-btn">Options</a></li>
+				<li><a href="#" class="nes-btn is-primary">New Game</a></li>
+				<li><a href="#" class="nes-btn is-success">Save</a></li>
 			</ul>
 		</footer>
 	</main>
-	<script src="engine/app.js"></script>
+	<script src="dist/game.js"></script>
 </body>
 </html>

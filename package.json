@@ -1,9 +1,11 @@
 {
-  "name": "SpaceBar-Game",
+  "name": "@shekhardesigner/spacebar.game",
   "version": "1.0.0",
   "description": "Spacebar jump game",
   "main": "app.js",
   "scripts": {
+    "start": "http-server -p 8082",
+    "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,14 +20,29 @@
     "CSS3"
   ],
   "author": "Shekhar Sharma",
-  "license": "MIt",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/shekhardesigner/SpaceBar-Game/issues"
   },
   "homepage": "https://github.com/shekhardesigner/SpaceBar-Game",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.6.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "nes.css": "^2.2.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2"
+  },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "webpack-cli": "^3.3.9"
   }
 }

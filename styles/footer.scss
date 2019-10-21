@@ -1,6 +1,6 @@
 footer {
 	@include bar;
-	position: absolute;
+	position: absolute !important;
 	bottom:0;
 	width:100%;
 	@include box($footer-size);

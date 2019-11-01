@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>JumpGame</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="dist/game.css" />
-    <style>
-      html,
-      body,
-      pre,
-      code,
-      kbd,
-      samp {
-        font-family: "Press Start 2P", cursive;
-      }
-      .nes-badge-block .nes-badge {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Yo mero game ho</h1>
-      <header class="nes-container">
-        <h1>JumpGame</h1>
-        <div class="metabar">
-          <span class="meta left">
-            <i class="nes-icon star is-small"></i>
-            <strong id="metaLevel">1</strong>
-          </span>
-          <span class="meta right item nes-badge-block">
-            <div class="nes-badge is-splited">
-              <span class="is-dark">Score: </span>
-              <span class="is-success" id="metaScore">100%</span>
-            </div>
-            <div class="nes-badge is-splited">
-              <span class="is-dark">High: </span>
-              <span class="is-error" id="metaHighest">1000</span>
-            </div>
-          </span>
-        </div>
-      </header>
+<head>
+	<meta charset="UTF-8">
+	<title>JumpGame</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" href="dist/game.css">
+	<style>
+		html, body, pre, code, kbd, samp {
+			font-family: 'Press Start 2P', cursive;
+		}
+		.nes-badge-block .nes-badge {
+			display: block;
+		}
 
-      <section>
-        <aside>
-          <ul class="item">
-            <li><a title="Mute" href="#">Mute</a></li>
-            <li><a title="Change Avatar" href="#">Change Avatar</a></li>
-          </ul>
-        </aside>
+		.list-inline {
+			margin: 10px 0 0;
+		}
+		.list-inline > li{
+			display: inline-block;
+		}
+	  </style>
+</head>
+<body>
+	<main>
+		<header class="nes-container">
+			<h1>SpaceBar Jump Game</h1>
+			<div class="metabar">
+				<span class="meta left">
+					<i class="nes-icon star is-small"></i>
+					<strong id="metaLevel">1</strong>
+				</span>
+				<span class="meta right item nes-badge-block">
+					<div class="nes-badge is-splited">
+						<span class="is-dark">Score: </span>
+						<span class="is-success" id=metaScore>100%</span>
+					</div>
+					<div class="nes-badge is-splited">
+						<span class="is-dark">High: </span>
+						<span class="is-error" id=metaHighest>1000</span>
+					</div>
+				</span>
+			</div>
+		</header>
+
+		<section>
+			<aside>
+				<ul class="item nes-list list-inline">
+					<li><a class="nes-btn is-primary" title="Mute" href="#">Mute</a></li>
+					<li><a class="nes-btn is-warning" title="Change Avatar" href="#">Change Avatar</a></li>
+				</ul>
+			</aside>
 
         <div class="base">
           <div class="person">Human</div>

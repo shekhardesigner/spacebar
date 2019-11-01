@@ -12,13 +12,22 @@
 		.nes-badge-block .nes-badge {
 			display: block;
 		}
+
+		.list-inline {
+			margin: 10px 0 0;
+		}
+		.list-inline > li{
+			display: inline-block;
+		}
 	  </style>
 </head>
 <body>
 	<main>
 		<header class="nes-container">
-			<h1>JumpGame</h1>
+			<h1>SpaceBar Jump Game</h1>
 			<div class="metabar">
+
+
 				<span class="meta left">
 					<i class="nes-icon star is-small"></i>
 					<strong id="metaLevel">1</strong>
@@ -38,9 +47,9 @@
 
 		<section>
 			<aside>
-				<ul class="item">
-					<li><a title="Mute" href="#">Mute</a></li>
-					<li><a title="Change Avatar" href="#">Change Avatar</a></li>
+				<ul class="item nes-list list-inline">
+					<li><a class="nes-btn is-primary" title="Mute" href="#">Mute</a></li>
+					<li><a class="nes-btn is-warning" title="Change Avatar" href="#">Change Avatar</a></li>
 				</ul>
 			</aside>
 

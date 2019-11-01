@@ -134,7 +134,7 @@ function Game () {
       _obs.classList.add(constants.obstacleVariation[random() - 1]);
 
       elements.obstacles.appendChild(_obs);
-      interval = setInterval(obstacle.move, 60);
+      interval = setInterval(obstacle.move, 100);
     };
 
     obstacle.move = function(elm) {
